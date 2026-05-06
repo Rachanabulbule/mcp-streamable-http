@@ -9,8 +9,13 @@ mcp = FastMCP(
     stateless_http=True,
     json_response=True,
     transport_security=TransportSecuritySettings(
-        enable_dns_rebinding_protection=False
+    enable_dns_rebinding_protection=True,
+    allowed_hosts=["localhost:*", "127.0.0.1:*"],
+    allowed_origins=["http://localhost:*"]
     )
+    # TransportSecuritySettings(
+    #     enable_dns_rebinding_protection=False
+    # )
 )
 
 @mcp.tool(description="Adds two to a number")
