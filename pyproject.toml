@@ -1,0 +1,12 @@
+[project]
+name = "mcp-streamable-http"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[all]>=0.136.1",
+    "fastmcp>=3.2.4",
+    "mcp[cli]>=1.27.0",
+    "uvicorn>=0.46.0",
+]
